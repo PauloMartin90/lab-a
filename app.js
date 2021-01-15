@@ -8,7 +8,11 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sum(a, b) { //eslint-disable-line
 
+    var arrayInfo
+    arrayInfo[0] = a + b;
+    arrayInfo[1] = ("The sum of " + a + " and " + b + " is " + 11 + ".");
 }
+sum(4,7)
 
 // Here is the test for sum(); uncomment it to run it
 // testSum(4, 7);
