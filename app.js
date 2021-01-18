@@ -99,12 +99,6 @@ function sumAndMultiply(a, b, c) { //eslint-disable-line
 
 
 
-}
-sumAndMultiply(4,7,5)
-// console.log(sumAndMultiply)
-testSumAndMultiply(4, 7, 5);
-// console.log(testSumAndMultiply)
-
 // // Here is the test for sumAndMultiply(); uncomment it to run it
 // // testSumAndMultiply(4,7,5);
 
