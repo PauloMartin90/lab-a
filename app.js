@@ -101,7 +101,6 @@ function sumAndMultiply(a, b, c) { //eslint-disable-line
 }
 testSumAndMultiply(4, 7, 5)
 
- console.log(testSumAndMultiply)
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
 // testSumAndMultiply(4,7,5);
@@ -152,13 +151,30 @@ Write a function called multiplyArray() that takes an array of numbers as its ar
 IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To do multiplication, use your multiply() function that you've already created. You're going to have to be resourceful to figure out how to do this. This function should handle an array containing three elements. However, you may continue to use the + operator for string concatenation.
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
+
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
 
+    var multiplySolarray = []
+    var multiplySolAns = 1
+
+        for (let i = multArr.length -1; i >=0; i--) {
+            
+            multiplySolarray = (multiply(multArr[i], multiplySolAns))
+            multiplySolAns = multiplySolarray[0]
+        }
+
+        var multiWrite = 'The numbers ' + multArr[0] + ',' + multArr[1] + ',' + multArr[2] + ' have a product of ' + multiplySolAns + '.'
+        var solutionArrayChecker  =[]
+        solutionArrayChecker.push(multiplySolAns)
+        solutionArrayChecker.push(multiWrite)
+
+        return solutionArrayChecker
+        
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
