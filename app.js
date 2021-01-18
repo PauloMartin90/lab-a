@@ -8,11 +8,14 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sum(a, b) { //eslint-disable-line
 
-    var arrayInfo
-    arrayInfo[0] = a + b;
-    arrayInfo[1] = ("The sum of " + a + " and " + b + " is " + 11 + ".");
+    // console.log(a,b)
+    var summ = a + b
+    var sumWrite = "The sum of " + a + " and "+ b + " is " + summ + "."
+    var ansArray = [summ, sumWrite]
+    return ansArray
+
 }
-sum(4,7)
+testSum(4,7);
 
 // Here is the test for sum(); uncomment it to run it
 // testSum(4, 7);
@@ -27,8 +30,21 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
+    
+    var ansArray = []
+    var summMultiple = a*b
+    var summWrite = ("The product of " + a +" and " + b + " is " + summMultiple + ".")
+    ansArray.push(summMultiple)
+    ansArray.push(summWrite)
+    
+    
+    return ansArray
 
+    
+    
 }
+testMultiply(5,9);
+
 
 // Here is the test for multiply(); uncomment it to run it
 // testMultiply(5,9);
@@ -46,7 +62,46 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
 
+        var array = [a, b, c]
+        var solutionArrayChecker =[]
+        // console.log(array)
+
+    var sumSolutionarray = []
+    var sumSolutionAns= 0
+        for (let i = 0; i < array.length; i++) {
+
+            sumSolutionarray = (sum(array[i], sumSolutionAns))
+            sumSolutionAns = sumSolutionarray[0]
+            // console.log(sumSolutionAns)
+            
+        }
+
+    var multiplySolarray = []
+    var multiplySolAns = 1
+        for (let i = array.length -1; i >=0; i--) {
+            
+            multiplySolarray = (multiply(array[i], multiplySolAns))
+            multiplySolAns = multiplySolarray[0]
+
+        }
+
+        var additionWrite =  a + ' and ' + b + ' and ' + c + ' sum to ' + sumSolutionAns + '.'
+        var multiWrite = 'The product of ' + a + " and " + b + " and " + c + " is " + multiplySolAns + '.'
+    
+
+        solutionArrayChecker.push(sumSolutionAns)
+        solutionArrayChecker.push(multiplySolAns)
+        solutionArrayChecker.push(additionWrite)
+        solutionArrayChecker.push(multiWrite)
+        
+        return(solutionArrayChecker)
+
+
+
 }
+testSumAndMultiply(4, 7, 5)
+
+ console.log(testSumAndMultiply)
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
 // testSumAndMultiply(4,7,5);
@@ -64,8 +119,25 @@ Test this function by hand in the console to get it working, and when you think 
 var testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
+    
+    var sumSolutionarray = []
+    var sumSolutionAns= 0
+
+        for (let i = 0; i < sumArr.length; i++) {
+
+            sumSolutionarray = (sum(sumArr[i], sumSolutionAns))
+            sumSolutionAns = sumSolutionarray[0]
+    }
+
+    var solutionArrayChecker  =[]
+    var sumWrite = sumArr[0] + ',' + sumArr[1] + ',' + sumArr[2] + ' was passed in as an array of numbers, and ' + sumSolutionAns + ' is their sum.'
+    solutionArrayChecker.push(sumSolutionAns)
+    solutionArrayChecker.push(sumWrite)
+
+    return solutionArrayChecker
 
 }
+testSumArray(testArray)
 
 // Here is the test for sumArray(); uncomment it to run it
 
